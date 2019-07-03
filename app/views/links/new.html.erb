@@ -1,0 +1,13 @@
+<%= form_for @link do |f| %>
+	<%= f.text_field :short_link  %>
+	<%= f.submit 'Create' %>
+<% end %>
+<% if @link.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @link.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
